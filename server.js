@@ -6,12 +6,13 @@ const knex = require('knex');
 const db = knex({
   client: 'pg',
   connection: {
-    connectionString : 'process.env.DATABASE_URL',
+  	connectionString : 'process.env.DATABASE_URL',
     ssl: true
+    // host : 'postgresql-deep-20085',
     // user : 'postgres',
     // password : 'cbit1234',
     // database : 'Face-Rec'
-  } 
+  }
 });
 
 var bcrypt = require('bcrypt');
@@ -111,3 +112,5 @@ app.post('/register', (req, res) => {
 app.listen(process.env.PORT || 3000, () => {
 	console.log(`server running at port ${process.env.PORT}`)
 })
+
+
