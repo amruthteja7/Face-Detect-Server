@@ -6,8 +6,8 @@ const knex = require('knex');
 const db = knex({
   client: 'pg',
   connection: {
-  	connectionString : 'process.env.DATABASE_URL',
-    ssl: true
+  	connectionString: process.env.DATABASE_URL,
+  	ssl: true
     // host : 'postgresql-deep-20085',
     // user : 'postgres',
     // password : 'cbit1234',
